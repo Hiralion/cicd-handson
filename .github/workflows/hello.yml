@@ -1,0 +1,8 @@
+name: Hello    # ワークフロー名
+on: push  # イベント（プッシュ時に起動）
+jobs:
+    hello:    # ジョブ名
+        runs-on: ubuntu-latest    # 実行環境
+        steps:
+            -  run: echo "Hello World"    # 実行コマンド
+            -  uses: actions/checkout@v4  #
