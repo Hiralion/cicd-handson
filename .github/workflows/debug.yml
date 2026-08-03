@@ -1,9 +1,0 @@
-name: Debug log
-
-on: push
-
-jobs:
-  debug:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "::debug::This is a debug log"
