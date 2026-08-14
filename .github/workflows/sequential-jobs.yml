@@ -1,4 +1,4 @@
-name: Parallel jobs
+name: Sequential jobs
 on: push
 jobs:
   first:
@@ -7,9 +7,11 @@ jobs:
       - run: sleep 10 && echo "First job"
   second:
     runs-on: ubuntu-latest
-    steps:
+    needs: [first]
+    step:
       - run: sleep 10 && echo "Second job"
-  third:
+  Third:
     runs-on: ubuntu-latest
-    steps:
+    needs: [second]
+    step:
       - run: sleep 10 && echo "Third job"
