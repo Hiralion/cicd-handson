@@ -8,7 +8,7 @@ jobs:
   second:
     runs-on: ubuntu-latest
     steps:
-      - run: sleep 10 $$ echo "Second job"
+      - run: sleep 10 && echo "Second job"
   third:
     runs-on: ubuntu-latest
     steps:
