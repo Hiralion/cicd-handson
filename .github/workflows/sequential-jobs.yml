@@ -8,10 +8,10 @@ jobs:
   second:
     runs-on: ubuntu-latest
     needs: [first]
-    step:
+    steps:
       - run: sleep 10 && echo "Second job"
   Third:
     runs-on: ubuntu-latest
     needs: [second]
-    step:
+    steps:
       - run: sleep 10 && echo "Third job"
